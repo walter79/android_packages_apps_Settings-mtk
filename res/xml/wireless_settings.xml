@@ -91,13 +91,4 @@
             android:targetClass="com.android.cellbroadcastreceiver.CellBroadcastSettings" />
     </PreferenceScreen>
 
-    <PreferenceScreen
-        android:key="smart_cover_settings"
-        android:title="@string/smart_cover_settings" >
-        <intent
-            android:action="android.intent.action.MAIN"
-            android:targetPackage="de.fire855.smartcover"
-            android:targetClass="de.fire855.smartcover.SettingsActivity" />
-    </PreferenceScreen>
-
 </PreferenceScreen>
