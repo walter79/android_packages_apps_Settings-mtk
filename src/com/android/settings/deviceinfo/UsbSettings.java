@@ -78,19 +78,10 @@ public class UsbSettings extends SettingsPreferenceFragment {
         public void onReceive(Context context, Intent intent) {
             String action = intent.getAction();
             if (action.equals(UsbManager.ACTION_USB_STATE)) {
-               mUsbAccessoryMode = intent.getBooleanExtra(UsbManager.USB_FUNCTION_ACCESSORY, false);
+                mUsbAccessoryMode = intent.getBooleanExtra(UsbManager.USB_FUNCTION_ACCESSORY, false);
                 Log.e(TAG, "UsbAccessoryMode " + mUsbAccessoryMode);
-                boolean connected = intent.getExtras().getBoolean(UsbManager.USB_CONNECTED);
-                if (!connected) {
-                    Toast.makeText(getActivity(), R.string.usb_not_connected,
-                                   Toast.LENGTH_SHORT).show();
-                    finish();
-                    return;
-                } else {
-                    // once USB connected again, we take setting operation as completed
-                    mOperationInProgress = false;
-                    updateUsbFunctionState();
-                }
+                mOperationInProgress = false;
+                updateUsbFunctionState();
             }
         }
     };

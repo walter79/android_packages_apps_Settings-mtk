@@ -6063,4 +6063,7 @@
    <string name="imei_information_summary">IMEI relative information</string>
    <string name="slot_number">(Slot<xliff:g id="slot_num">%1$d</xliff:g>)</string>
 
+   <!-- Smart Cover settings -->
+   <string name="smart_cover_settings">Smart Cover</string>
+
 </resources>
